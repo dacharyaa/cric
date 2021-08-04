@@ -1,0 +1,39 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Review Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="table-users">
+<form action="/insert_record" method="POST">
+
+    <table align="center">
+
+    <tbody>
+    <tr>
+        <td>ID :</td>
+        <td><input type="text" class="form-control" name="id1" ></td>
+    </tr>
+     <tr>
+        <td>First Name :</td>
+        <td><input type="text" class="form-control" name="first_name" ></td>
+    </tr>
+    <tr>
+        <td>Last Name :</td>
+        <td><input type="text" class="form-control" name="last_name" ></td>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="submit" value="Insert_Record"></td>
+
+    </tr>
+
+    </tbody>
+</table>
+
+</form>
+</div>
+</body>
+</html>

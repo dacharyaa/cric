@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>EDIT Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="table-users">
+  <table align="center">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Operations</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for row in result %}
+            <tr>
+                 <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>
+                    <a href="/update/{{row[0]}}" >Edit</a>
+                    <a href="/delete/{{row[0]}}" >Delete</a>
+                </td>
+
+            </tr>
+        {% endfor %}
+        <tr> <td><a href="/insert" >Insert</a> </td></tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>

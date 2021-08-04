@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify, url_for
+from flask_cors import CORS,cross_origin
 import mysql.connector as connection
 
 app = Flask(__name__)
